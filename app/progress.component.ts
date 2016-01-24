@@ -20,7 +20,12 @@ import {Component, Input} from 'angular2/core';
         .progress-bar {
             background-color: #1abc9c;
         }
-    `]
+
+        @media (max-width: 767px) {
+            .progress {
+                height: 15px;
+            }
+        }`]
 })
 export class ProgressComponent {
     @Input() max: number;

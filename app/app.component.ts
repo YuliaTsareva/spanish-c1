@@ -21,7 +21,12 @@ import {ResultComponent} from './result.component';
             padding: 5px 0;
             margin-top: 115px;
         }
-    `]
+        @media (max-width: 767px) {
+            my-task {
+                margin-top: 60px;
+            }
+        }`
+    ]
 })
 export class AppComponent {
     constructor(public store:TaskService) {

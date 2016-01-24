@@ -11,8 +11,9 @@ import {TaskService} from './task.service';
                         {{store.task.verb}}</a>
                     <input [(ngModel)]="answer" (keyup.enter)="onEnterPressed()"
                         [readonly]="store.task.isAnswered"
+                        class="answer"
                         [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
-                    {{store.task.object}}
+                    <span class="object">{{store.task.object}}</span>
                </h3>
                <div class="result"
                     [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
@@ -85,7 +86,22 @@ import {TaskService} from './task.service';
         .error, .error .translation {
             color: #e74c3c;
         }
-    `]
+        @media (max-width: 400px) {
+            .verb, .answer, .object {
+                display: block;
+            }
+            .verb {
+                border: none;
+                text-decoration: underline;
+            }
+            input {
+                width: 100%;
+            }
+            .result {
+                margin-top: 30px;
+            }
+        }`
+    ]
 })
 export class TaskComponent {
     private answer: string;

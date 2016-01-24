@@ -28,6 +28,7 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
         ul {
             display: inline-block;
             vertical-align: middle;
+            padding: 0;
         }
         li {
             list-style-type: none;
