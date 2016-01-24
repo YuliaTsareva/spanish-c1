@@ -112,9 +112,6 @@ export class TaskComponent {
 
     private onEnterPressed() {
         if (!this.store.task.isAnswered) {
-            if (!this.answer) {
-                return;
-            }
             this.store.task.checkAnswer(this.answer);
         } else {
             this.answer = '';
