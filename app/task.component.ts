@@ -104,7 +104,7 @@ import {TaskService} from './task.service';
     ]
 })
 export class TaskComponent {
-    private answer: string;
+    private answer = '';
     private translationIsVisible = false;
 
     constructor(public store:TaskService) {

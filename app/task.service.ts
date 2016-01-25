@@ -16,6 +16,8 @@ export class TaskService {
     }
 
     public reset() {
+        this.tasksDoneCount = 0;
+
         this.tasks = <Task[]>_.chain(verbs)
             .filter(item => !!item.translation)
             .map(item => new Task(item.verb,
@@ -26,7 +28,6 @@ export class TaskService {
             .value();
 
         this.currentTask = this.tasks[0];
-        this.tasksDoneCount = 0;
     }
 
     public get task() {
