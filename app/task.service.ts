@@ -46,8 +46,12 @@ export class TaskService {
         return this.tasksDoneCount;
     }
 
-    public goToNextTask() {
+    public checkAnswer(answer:string) {
+        this.currentTask.checkAnswer(answer);
         this.tasksDoneCount++;
+    }
+
+    public goToNextTask() {
         this.currentTask = this.tasksDoneCount < this.tasks.length ? this.tasks[this.tasksDoneCount] : null;
     }
 }

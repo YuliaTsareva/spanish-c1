@@ -112,7 +112,7 @@ export class TaskComponent {
 
     private onEnterPressed() {
         if (!this.store.task.isAnswered) {
-            this.store.task.checkAnswer(this.answer);
+            this.store.checkAnswer(this.answer);
         } else {
             this.answer = '';
             this.translationIsVisible = false;
