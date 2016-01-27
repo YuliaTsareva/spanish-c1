@@ -4,6 +4,7 @@ set -e # exit with nonzero exit code if anything fails
 # copy files to the deploy directory
 mkdir deploy
 cp ./index.html ./deploy/index.html
+cp ./css/styles.css ./deploy/css/styles.css
 cp ./favicon.png ./deploy/favicon.png
 cp -r ./dist ./deploy/dist
 
