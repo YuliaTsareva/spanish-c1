@@ -4,6 +4,7 @@ set -e # exit with nonzero exit code if anything fails
 # copy files to the deploy directory
 mkdir deploy
 cp ./index.html ./deploy/index.html
+cp ./favicon.png ./deploy/favicon.png
 cp -r ./dist ./deploy/dist
 
 # go to the deploy directory and create a *new* Git repo
