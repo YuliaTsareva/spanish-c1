@@ -1,3 +1,15 @@
 language: node_js
 node_js:
   - 5.5
+
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+
+env:
+ global:
+ - GH_REF: github.com/yuliatsareva/spanish-c1.git
+ - secure: suriJcJa4HBPEcmCQhe9kLXZYpojdIXOWp9FBmdnPdUnjeuhf+IVzrU0gATgLxngiLpEExNp69Gp1z4/j7fLW727xe8zLdo5eMB5saFIYZJw6QjqhgGcgu4+cu8/I1QsNAs7rShDZDvkWuiw8N+Bz/dY5R7baZSZSfH9N+6ule8UD1aWmVhKvZMtZ0O8oYzev33bAeWsuBIGR7WhQytw01kvC9lsiQAQwgPg0fgoxVyTz2N5bBqEe7YcoVX8Vn4/7CtsGC7dp+ZbVkyQ6mzIg5F4YN0xiDJkwbWCqj5/BLtZuymVaokYmJAa6f5DzhhkCVoBmVjToH6uza9yB9eRNldNYLLZjX9Q2z3vCJQ/slipyjWvoK0sFUqbOuS3h2c0vb6CEcp4fcPNQTI1S/IkQHe7cbRjlUUOOptUEHyBqnHESMQYirPvZ4QBMikbFTM8YQAuy6LNaUJN3wPMzimlaW6/gzdOFG428Y5VWftes9qLbEn4yTcCMXyUiGroqGP5an87CLh7E49a0YiJAPjMoWNI4zmoZKRuzJattbXQubowMFBGS5O1ux0PpSWeEgwrI+oWh4XqfHGtDN3PykWeE4aQk2iPThPsbfDWhA8Hsf+8LjRx8HQDmtiXPAvaka5xumRGbNaLg7PF3Spi5lhhxx7EuN/P8q4sJSDjkKylPfw=
