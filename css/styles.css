@@ -3,6 +3,10 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+    color: #039BE5;
+}
+
 my-app {
     display: block;
     background: #fff;

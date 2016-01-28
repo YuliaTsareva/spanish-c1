@@ -10,7 +10,9 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
                      <li *ngFor="#error of store.tasks | wrong">
                         {{error.verb}} <strong>{{error.preposition}}</strong> {{error.object}}
                      </li>
-                     <li class="repeat"><a href (click)="resetQuiz()"><i class="fa fa-repeat"></i> Otra vez</a></li>
+                     <li class="repeat">
+                       <a href (click)="resetQuiz($event)"><i class="fa fa-repeat"></i>Otra vez</a>
+                     </li>
                    </ul>
                </div>
               `,
@@ -40,6 +42,9 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
             text-transform: uppercase;
             text-decoration: underline;
         }
+        .fa {
+            margin-right: 6px;
+        }
         .repeat {
             margin-top: 10px;
             text-align: center;
@@ -53,7 +58,8 @@ export class ResultComponent {
     constructor(public store: TaskService) {
     }
 
-    public resetQuiz() {
+    public resetQuiz(event) {
         this.store.reset();
+        event.preventDefault();
     }
 }
