@@ -54,4 +54,8 @@ export class TaskService {
     public goToNextTask() {
         this.currentTask = this.tasksDoneCount < this.tasks.length ? this.tasks[this.tasksDoneCount] : null;
     }
+
+    public get verbs(): any[] {
+        return verbs;
+    }
 }
