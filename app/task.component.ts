@@ -29,7 +29,7 @@ import {TaskService} from './task.service';
             text-align: center;
         }
         a.verb:hover {
-            color: #337ab7;
+            color: #7f8c8d;
             text-decoration: none;
             border-color: #7f8c8d;
         }
