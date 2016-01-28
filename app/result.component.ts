@@ -1,6 +1,5 @@
-import {Component, Input} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {TaskService} from './task.service';
-import {Task} from './task';
 import {WrongAnswerPipe} from './wrongAnswer.pipe';
 
 @Component({
@@ -51,7 +50,7 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
     `]
 })
 export class ResultComponent {
-    constructor(public store:TaskService) {
+    constructor(public store: TaskService) {
     }
 
     public resetQuiz() {

@@ -6,6 +6,6 @@ import {Task} from './task';
 })
 export class WrongAnswerPipe {
     transform(value) {
-        return value.filter((task:Task) => task.answerIsWrong);
+        return value.filter((task: Task) => task.answerIsWrong);
     }
 }

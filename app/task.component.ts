@@ -1,6 +1,5 @@
 import {Component} from 'angular2/core';
 import {NgClass} from 'angular2/common';
-import {Task} from './task';
 import {TaskService} from './task.service';
 
 @Component({
@@ -107,7 +106,7 @@ export class TaskComponent {
     private answer = '';
     private translationIsVisible = false;
 
-    constructor(public store:TaskService) {
+    constructor(public store: TaskService) {
     }
 
     private onEnterPressed() {
