@@ -3,7 +3,6 @@ import {Component} from 'angular2/core';
 import {TaskService} from './task.service';
 import {ProgressComponent} from './progress.component';
 import {TaskComponent} from './task.component';
-import {Task} from './task';
 import {ResultComponent} from './result.component';
 
 @Component({
@@ -29,6 +28,6 @@ import {ResultComponent} from './result.component';
     ]
 })
 export class AppComponent {
-    constructor(public store:TaskService) {
+    constructor(public store: TaskService) {
     }
 }

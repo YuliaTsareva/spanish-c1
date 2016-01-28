@@ -2,14 +2,14 @@ import * as _ from 'underscore';
 import {Injectable} from 'angular2/core';
 import {Task} from './task';
 
-var verbs = require('../data/verbs.csv');
+const verbs = require('../data/verbs.csv');
 
 @Injectable()
 export class TaskService {
-    private tasks:Task[];
+    private tasks: Task[];
 
-    private currentTask:Task;
-    private tasksDoneCount:number;
+    private currentTask: Task;
+    private tasksDoneCount: number;
 
     constructor() {
         this.reset();
@@ -21,9 +21,9 @@ export class TaskService {
         this.tasks = <Task[]>_.chain(verbs)
             .filter(item => !!item.translation)
             .map(item => new Task(item.verb,
-                item.preposition,
-                item.object,
-                item.translation))
+                                  item.preposition,
+                                  item.object,
+                                  item.translation))
             .sample(10)
             .value();
 
@@ -46,7 +46,7 @@ export class TaskService {
         return this.tasksDoneCount;
     }
 
-    public checkAnswer(answer:string) {
+    public checkAnswer(answer: string) {
         this.currentTask.checkAnswer(answer);
         this.tasksDoneCount++;
     }
