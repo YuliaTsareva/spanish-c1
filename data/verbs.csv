@@ -13,7 +13,7 @@ bastar,,,
 carecer,de,algo,нуждаться в чем-либо
 comprometerse,,,
 conformarse,,,
-consistir,,,
+consistir,en,+ infinitivo,состоять в чем-либо
 convencer,a,alguien,убеждать кого-либо
 convencer,de,algo,убеждать в чем-либо
 cumplir,,,
@@ -22,11 +22,12 @@ despedirse,de,alguien,прощаться с кем-либо
 dirigirse
 empeñarse
 encargarse
-enterarse
-esmerarse
+enterarse,de,algo,осведомляться о чем-либо
+esmerarse,en,algo,усердствовать в чем-либо
 insistir,en,algo,настаивать на чем-либо
 intervenir,en,algo,участвовать в чем-либо
-negarse,
+negar,,algo,отрицать что-либо
+negarse,a,+ infinitivo,отказываться от чего-либо
 obligar,a,alguien,заставлять кого-либо
 obligar,a,hacer algo,заставлять что-либо делать
 obstinarse
@@ -34,10 +35,10 @@ ocuparse
 oponerse,a,algo,противиться чему-либо
 oponerse,a,alguien,противиться кому-либо
 optar
-permanecer
+permanecer,en,algún sitio,оставаться где-либо
 presumir
 recurrir
 renunciar
 soñar,,algo,видеть во сне что-либо
 soñar,con,algo,мечтать о чем-либо
-supeditar
+supeditar,a,algo,подчинять чему-либо
