@@ -1,13 +1,15 @@
+import {Verb} from './verb';
+
 export class Task {
     public isAnswered: boolean;
     public answer: string;
     public answerIsRight: boolean;
 
-    constructor(public verb: string, public preposition: string, public object: string, public translation: string) {
+    constructor(public verb: Verb) {
     }
 
     public checkAnswer(answer: string) {
-        if (this.preposition === answer.toLowerCase()) {
+        if (this.verb.preposition === answer.toLowerCase()) {
             this.answerIsRight = true;
         }
 

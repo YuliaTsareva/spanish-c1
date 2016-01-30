@@ -8,7 +8,7 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
     template: `<div class="errors">
                    <ul>
                      <li *ngFor="#error of store.tasks | wrong">
-                        {{error.verb}} <strong>{{error.preposition}}</strong> {{error.object}}
+                        {{error.verb.verb}} <strong>{{error.verb.preposition}}</strong> {{error.verb.object}}
                      </li>
                      <li class="repeat">
                        <a href (click)="resetQuiz($event)"><i class="fa fa-repeat"></i>Otra vez</a>
