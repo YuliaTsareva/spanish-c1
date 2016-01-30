@@ -1,8 +1,10 @@
 import * as _ from 'underscore';
 import {Injectable} from 'angular2/core';
-import {Task} from './task';
 
-const verbs = require('../data/verbs.csv');
+import {Task} from './task';
+import {Verb} from './verb';
+
+const verbs = _.filter<Verb>(require('../data/verbs.csv'), item => !!item.translation);
 
 @Injectable()
 export class TaskService {
@@ -19,11 +21,7 @@ export class TaskService {
         this.tasksDoneCount = 0;
 
         this.tasks = <Task[]>_.chain(verbs)
-            .filter(item => !!item.translation)
-            .map(item => new Task(item.verb,
-                                  item.preposition,
-                                  item.object,
-                                  item.translation))
+            .map(verb => new Task(verb))
             .sample(10)
             .value();
 
@@ -53,5 +51,9 @@ export class TaskService {
 
     public goToNextTask() {
         this.currentTask = this.tasksDoneCount < this.tasks.length ? this.tasks[this.tasksDoneCount] : null;
+    }
+
+    public get verbs(): Verb[] {
+        return verbs;
     }
 }

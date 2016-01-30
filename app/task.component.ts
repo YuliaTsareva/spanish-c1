@@ -17,11 +17,11 @@ import {TaskService} from './task.service';
                <div class="result"
                     [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
                  <span *ngIf="store.task.answerIsWrong" class="wrong-answer">
-                    {{store.task.verb}} <strong>{{store.task.preposition}}</strong> {{store.task.object}}
+                    {{store.task.verb.verb}} <strong>{{store.task.verb.preposition}}</strong> {{store.task.verb.object}}
                  </span>
                  <div class="translation"
                       [ngStyle]="{visibility: store.task.isAnswered || translationIsVisible ? 'visible' : 'hidden'}">
-                      {{store.task.translation}}
+                      {{store.task.verb.translation}}
                  </div>
                </div>`,
     styles: [`
