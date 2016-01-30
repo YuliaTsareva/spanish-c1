@@ -66,7 +66,6 @@ export class AppComponent {
 
     private toggleTheory(event) {
         this.theoryIsShown = !this.theoryIsShown;
-        console.log('toggleTheory', this.theoryIsShown);
         event.preventDefault();
     }
 }
