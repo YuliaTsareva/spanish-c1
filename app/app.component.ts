@@ -9,8 +9,11 @@ import {TheoryComponent} from './theory.component';
 @Component({
     selector: 'my-app',
     directives: [ProgressComponent, TaskComponent, ResultComponent, TheoryComponent],
-    template: `<a href class="help" (click)="toggleTheory($event)">
+    template: `<a *ngIf="!theoryIsShown" href class="help" (click)="toggleTheory($event)">
                  <i class="fa fa-question-circle"></i>Tabla de verbos
+               </a>
+               <a *ngIf="theoryIsShown" href class="help" (click)="toggleTheory($event)">
+                 <i class="fa fa-times"></i>Cerrar la tabla
                </a>
                <div *ngIf="store.task">
                  <my-progress [max]="store.totalCount" [value]="store.doneCount"></my-progress>
@@ -41,9 +44,9 @@ import {TheoryComponent} from './theory.component';
             bottom: 0px;
             left: 0px;
             right: 0px;
-            -webkit-column-count: 4;
-            -moz-column-count: 4;
-            column-count: 4;
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
             font-size: 15px;
             line-height: 24px;
             padding: 20px 15px 10px 40px;
