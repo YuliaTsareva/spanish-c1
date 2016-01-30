@@ -7,12 +7,12 @@ import {TaskService} from './task.service';
     directives: [NgClass],
     template: `<h3>
                     <a href="#" class="verb" (mouseenter)="showTranslation()" (mouseout)="hideTranslation()">
-                        {{store.task.verb}}</a>
+                        {{store.task.verb.verb}}</a>
                     <input [(ngModel)]="answer" (keyup.enter)="onEnterPressed()"
                         [readonly]="store.task.isAnswered"
                         class="answer"
                         [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
-                    <span class="object">{{store.task.object}}</span>
+                    <span class="object">{{store.task.verb.object}}</span>
                </h3>
                <div class="result"
                     [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
