@@ -1,9 +1,10 @@
 import {Verb} from './verb';
 
 export class Task {
-    public isAnswered: boolean;
     public answer: string;
-    public answerIsRight: boolean;
+
+    public isAnswered = false;
+    public answerIsRight = false;
 
     constructor(public verb: Verb) {
     }
