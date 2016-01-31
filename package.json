@@ -1,6 +1,6 @@
 {
-  "name": "angular2-quickstart",
-  "version": "1.0.0",
+  "name": "spanish-c1",
+  "version": "0.1.0",
   "scripts": {
     "postinstall": "node node_modules/typings/dist/bin/typings install",
     "tsc": "tsc",
@@ -9,7 +9,7 @@
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
     "test": "node node_modules/webpack/bin/webpack --config webpack.prod.config"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "angular2": "2.0.0-beta.0",
     "es6-promise": "^3.0.2",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "dsv-loader": "^1.0.3",
     "raw-loader": "^0.5.1",
-    "ts-loader": "^0.7.2",
+    "ts-loader": "^0.8.0",
     "tslint": "^3.3.0",
     "tslint-loader": "^2.1.0",
     "typescript": "^1.7.3",
