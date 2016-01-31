@@ -1,0 +1,17 @@
+.progress {
+    background: #ecf0f1;
+    height: 7px;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+.progress-bar {
+    background-color: #1abc9c;
+}
+
+@media (max-width: 767px) {
+    .progress {
+        height: 15px;
+    }
+}

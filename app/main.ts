@@ -2,6 +2,10 @@
  * Providers provided by Angular
  */
 import {bootstrap} from 'angular2/platform/browser';
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import {HashLocationStrategy} from 'angular2/router';
+import {LocationStrategy} from 'angular2/router';
+import {provide} from 'angular2/core';
 
 /*
  * App Component
@@ -15,6 +19,10 @@ import {TaskService} from './task.service';
  * our Services and Providers into Angular's dependency injection
  */
 document.addEventListener('DOMContentLoaded', function main() {
-    bootstrap(AppComponent, [TaskService])
+    bootstrap(AppComponent, [
+            TaskService,
+            ROUTER_PROVIDERS,
+            provide(LocationStrategy, {useClass: HashLocationStrategy})
+        ])
         .catch(err => console.error(err));
 });

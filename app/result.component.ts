@@ -16,43 +16,7 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
                    </ul>
                </div>
               `,
-    styles: [`
-        .errors:before {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-        }
-        .errors {
-            text-align: center;
-        }
-        ul {
-            display: inline-block;
-            vertical-align: middle;
-            padding: 0;
-        }
-        li {
-            list-style-type: none;
-            color: #e74c3c;
-            font-size: 20px;
-            line-height: 1.6;
-            white-space: nowrap;
-        }
-        strong {
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-        .fa {
-            margin-right: 6px;
-        }
-        .repeat {
-            margin-top: 10px;
-            text-align: center;
-        }
-        a {
-            font-size: 22px;
-        }
-    `]
+    styles: [ require('./result.css') ]
 })
 export class ResultComponent {
     constructor(public store: TaskService) {

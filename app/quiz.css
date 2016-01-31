@@ -1,0 +1,10 @@
+my-task {
+    display: block;
+    padding: 5px 0;
+    margin-top: 115px;
+}
+@media (max-width: 767px) {
+    my-task {
+        margin-top: 60px;
+    }
+}
