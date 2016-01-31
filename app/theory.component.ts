@@ -14,8 +14,7 @@ import {TaskService} from './task.service';
                  <li *ngFor="#verb of store.verbs">{{verb.verb}} <strong>{{verb.preposition}}</strong> {{verb.object}}
                  </li>
                </ul>
-    `,
-    styles: [ require('./theory.css') ]
+    `
 })
 export class TheoryComponent {
     constructor(public store: TaskService) {

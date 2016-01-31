@@ -10,10 +10,8 @@
 ul {
     display: inline-block;
     vertical-align: middle;
-    padding: 0;
 }
 li {
-    list-style-type: none;
     color: #e74c3c;
     font-size: 20px;
     line-height: 1.6;
