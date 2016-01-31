@@ -15,7 +15,7 @@ import {TaskService} from './task.service';
                  </li>
                </ul>
     `,
-    styles: [ require('./result.css') ]
+    styles: [ require('./theory.css') ]
 })
 export class TheoryComponent {
     constructor(public store: TaskService) {

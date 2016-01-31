@@ -23,7 +23,13 @@ module.exports = {
     },
 
     module: {
-        preLoaders: [{test: /\.ts$/, loader: 'tslint-loader', exclude: [/node_modules/]}],
+        preLoaders: [
+            {
+                test: /\.ts$/,
+                loader: 'tslint-loader',
+                exclude: [/node_modules/]
+            }
+        ],
         loaders: [
             {
                 test: /\.ts$/,
