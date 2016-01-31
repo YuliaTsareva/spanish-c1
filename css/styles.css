@@ -18,6 +18,31 @@ my-app {
     height: 370px;
 }
 
+my-theory {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 70px 15px 10px 40px;
+}
+
+.help {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+}
+.fa {
+    margin-right: 5px;
+}
+
 @media (max-width: 767px) {
     my-app {
         position: absolute;
