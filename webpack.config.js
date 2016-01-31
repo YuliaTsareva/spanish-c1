@@ -7,7 +7,7 @@ module.exports = {
     debug: true,
 
     // our angular app
-    entry: {'vendor': './app/vendor.ts', 'main': './app/main.ts'},
+    entry: {'vendor': './app/vendor.ts', 'main': './app/main.ts', 'test': './app/test-main.js'},
 
     // Config for our build files
     output: {
@@ -34,7 +34,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 loader: 'ts-loader',
-                exclude: [/\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
+                exclude: [/node_modules\/(?!(ng2-.+))/]
             },
             {
                 test: /\.csv$/,

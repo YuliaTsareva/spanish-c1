@@ -5,7 +5,7 @@ import {Task} from './task';
     name: 'wrong'
 })
 export class WrongAnswerPipe {
-    transform(value) {
+    transform(value: Task[]) {
         return value.filter((task: Task) => task.answerIsWrong);
     }
 }
