@@ -7,25 +7,7 @@ import {Component, Input} from 'angular2/core';
           <div class="progress-bar" [ngStyle]="{width: getPercentage()}">
           </div>
         </div>`,
-    styles: [`
-        .progress {
-            background: #ecf0f1;
-            //width: 100%;
-            height: 7px;
-            border-radius: 0;
-            box-shadow: none;
-            margin: 0;
-        }
-
-        .progress-bar {
-            background-color: #1abc9c;
-        }
-
-        @media (max-width: 767px) {
-            .progress {
-                height: 15px;
-            }
-        }`]
+    styles: [ require('./progress.css') ]
 })
 export class ProgressComponent {
     @Input() max: number;

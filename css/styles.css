@@ -7,6 +7,11 @@ a {
     color: #039be5;
 }
 
+strong {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
 my-app {
     display: block;
     background: #fff;

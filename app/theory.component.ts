@@ -15,16 +15,7 @@ import {TaskService} from './task.service';
                  </li>
                </ul>
     `,
-    styles: [`
-        ul {
-            padding: 0;
-            list-style-type: none
-        }
-        strong {
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-    `]
+    styles: [ require('./result.css') ]
 })
 export class TheoryComponent {
     constructor(public store: TaskService) {

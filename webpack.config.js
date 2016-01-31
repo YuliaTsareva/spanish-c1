@@ -31,8 +31,12 @@ module.exports = {
                 exclude: [/\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
             },
             {
-                test: /\.csv?$/,
+                test: /\.csv$/,
                 loader: 'dsv-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'raw-loader'
             }
         ]
     },

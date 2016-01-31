@@ -20,18 +20,7 @@ import {TheoryComponent} from './theory.component';
                </div>
                <my-result *ngIf="store.noMoreQuestions()"></my-result>
                <my-theory *ngIf="theoryIsShown"></my-theory>`,
-    styles: [`
-        my-task {
-            display: block;
-            padding: 5px 0;
-            margin-top: 115px;
-        }
-        @media (max-width: 767px) {
-            my-task {
-                margin-top: 60px;
-            }
-        }`
-    ]
+    styles: [ require('./quiz.css') ]
 })
 export class QuizComponent {
     constructor(public store: TaskService) {
