@@ -19,7 +19,7 @@ a:visited, a:active, a:focus {
 }
 
 input {
-    margin: 10px 10px 15px 0;
+    margin: 10px 10px 15px 10px;
 
     width: 150px;
     font-size: 26px;
