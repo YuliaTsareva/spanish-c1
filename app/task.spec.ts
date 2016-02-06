@@ -12,7 +12,6 @@ describe('Task', () => {
 
     describe('without answer', () => {
         it('answer should be undefined', () => {
-            expect(false).toBe(true);
             expect(task.answer).toBeUndefined();
         });
 
