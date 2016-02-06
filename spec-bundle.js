@@ -28,7 +28,7 @@ require('zone.js/dist/jasmine-patch.js');
  we say do this recursively
  */
 //var testContext = require.context('./test', true, /\.spec\.ts/);
-var appContext = require.context('./app', true, /\.ts/);
+var appContext = require.context('./app', true, /\.spec\.ts/);
 //var appContext = require.context('./app', true, /\.spec\.ts/);
 
 // get all the files, for each file, call the context function

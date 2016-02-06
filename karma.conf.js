@@ -27,13 +27,13 @@ module.exports = function(config) {
         // Webpack Config at ./webpack.test.config.js
         webpack: testWebpackConfig,
 
-        coverageReporter: {
-            dir : 'coverage/',
-            reporters: [
-                { type: 'text-summary' },
-                { type: 'html' }
-            ]
-        },
+        //coverageReporter: {
+        //    dir : 'coverage/',
+        //    reporters: [
+        //        { type: 'text-summary' },
+        //        { type: 'html' }
+        //    ]
+        //},
 
         // Webpack please don't spam the console when running in karma!
         webpackServer: { noInfo: true },
