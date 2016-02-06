@@ -46,18 +46,6 @@ module.exports = {
                 loader: 'dsv-loader'
             }
         ],
-        postLoaders: [
-            // instrument only testing sources with Istanbul
-            {
-                test: /\.(js|ts)$/,
-                include: root('app'),
-                loader: 'istanbul-instrumenter-loader',
-                exclude: [
-                    /\.e2e\.ts$/,
-                    /node_modules/
-                ]
-            }
-        ],
         noParse: [
             /zone\.js\/dist\/.+/,
             /angular2\/bundles\/.+/
