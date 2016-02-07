@@ -1,16 +1,18 @@
 import {Component} from 'angular2/core';
 import {NgClass} from 'angular2/common';
+
+import {Autofocus} from './autofocus.directive';
 import {TaskService} from './task.service';
 
 @Component({
     selector: 'my-task',
-    directives: [NgClass],
+    directives: [NgClass, Autofocus],
     template: `<h3>
                     <a href="#" class="verb" (mouseenter)="showTranslation()" (mouseout)="hideTranslation()">
                         {{store.task.verb.verb}}</a>
                     <input [(ngModel)]="answer" (keyup.enter)="onEnterPressed()"
                         [readonly]="store.task.isAnswered"
-                        class="answer"
+                        class="answer" autofocus
                         [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
                     <span class="object">{{store.task.verb.object}}</span>
                </h3>
