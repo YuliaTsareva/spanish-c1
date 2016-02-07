@@ -5,7 +5,7 @@ import {Autofocus} from './autofocus.directive';
 import {TaskService} from './task.service';
 
 @Component({
-    selector: 'my-task',
+    selector: 'my-preposition-task',
     directives: [NgClass, Autofocus],
     template: `<h3>
                     <a href="#" class="verb" (mouseenter)="showTranslation()" (mouseout)="hideTranslation()">
@@ -26,9 +26,9 @@ import {TaskService} from './task.service';
                       {{store.task.verb.translation}}
                  </div>
                </div>`,
-    styles: [ require('./task.css') ]
+    styles: [ require('./prepositionTask.css') ]
 })
-export class TaskComponent {
+export class PrepositionTaskComponent {
     private answer = '';
     private translationIsVisible = false;
 

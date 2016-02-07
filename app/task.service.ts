@@ -25,7 +25,7 @@ export class TaskService {
         this._livesCount = this._initialLivesCount;
 
         this.tasks = <Task[]>_.chain(verbs)
-            .map(verb => new Task(verb))
+            .map(verb => Task.create(verb))
             .sample(20)
             .value();
 

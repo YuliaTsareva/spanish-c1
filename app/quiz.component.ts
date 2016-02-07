@@ -3,22 +3,24 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {TaskService} from './task.service';
 import {ProgressComponent} from './progress.component';
-import {TaskComponent} from './task.component';
+import {PrepositionTaskComponent} from './prepositionTask.component';
+import {TranslationTaskComponent} from './translationTask.component';
 import {ResultComponent} from './result.component';
 import {TheoryComponent} from './theory.component';
 import {LivesComponent} from './lives.component';
 
 @Component({
     selector: 'my-quiz',
-    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, TheoryComponent, LivesComponent],
+    directives: [ROUTER_DIRECTIVES, ProgressComponent, PrepositionTaskComponent, TranslationTaskComponent,
+                 ResultComponent, TheoryComponent, LivesComponent],
     template: `<a href class="help" [routerLink]="['Theory']">
                  <i class="fa fa-question-circle"></i>Tabla de verbos
                </a>
                <my-lives></my-lives>
                <div *ngIf="store.task">
                  <my-progress [max]="store.totalCount" [value]="store.doneCount"></my-progress>
-                 <my-task>
-                 </my-task>
+                 <my-preposition-task *ngIf="store.task.type === 'preposition'"></my-preposition-task>
+                 <my-translation-task *ngIf="store.task.type === 'translation'"></my-translation-task>
                </div>
                <my-result *ngIf="store.noMoreQuestions()"></my-result>
                <my-theory *ngIf="theoryIsShown"></my-theory>`,
