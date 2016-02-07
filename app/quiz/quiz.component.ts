@@ -5,12 +5,11 @@ import {TaskService} from '../task.service';
 import {ProgressComponent} from '../progress/progress.component';
 import {TaskComponent} from '../task/task.component';
 import {ResultComponent} from '../result/result.component';
-import {TheoryComponent} from '../theory/theory.component';
 import {LivesComponent} from '../lives/lives.component';
 
 @Component({
     selector: 'my-quiz',
-    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, TheoryComponent, LivesComponent],
+    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, LivesComponent],
     template: `<a href class="help" [routerLink]="['Theory']">
                  <i class="fa fa-question-circle"></i>Tabla de verbos
                </a>
@@ -19,8 +18,7 @@ import {LivesComponent} from '../lives/lives.component';
                  <my-progress [max]="store.totalCount" [value]="store.doneCount"></my-progress>
                  <my-task></my-task>
                </div>
-               <my-result *ngIf="store.noMoreQuestions()"></my-result>
-               <my-theory *ngIf="theoryIsShown"></my-theory>`,
+               <my-result *ngIf="store.noMoreQuestions()"></my-result>`,
     styles: [ require('./quiz.css') ]
 })
 export class QuizComponent {
