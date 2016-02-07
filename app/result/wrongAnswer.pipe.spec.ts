@@ -1,6 +1,7 @@
 import {WrongAnswerPipe} from './wrongAnswer.pipe';
 import {Task} from '../task';
 import {Verb} from '../verb';
+import {PrepositionTask} from '../task';
 
 describe('WrongAnswerPipe', () => {
     let verb: Verb;
@@ -10,7 +11,7 @@ describe('WrongAnswerPipe', () => {
 
     beforeEach(() => {
         verb = new Verb('depender', 'de', 'algo', 'зависеть от чего-либо');
-        task = new Task(verb);
+        task = new PrepositionTask(verb);
 
         pipe = new WrongAnswerPipe();
     });

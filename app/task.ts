@@ -29,7 +29,7 @@ export class Task {
     }
 }
 
-class PrepositionTask extends Task {
+export class PrepositionTask extends Task {
     constructor(public verb: Verb) {
         super(verb);
         this.type = 'preposition';
@@ -42,7 +42,7 @@ class PrepositionTask extends Task {
     }
 }
 
-class TranslationTask extends Task {
+export class TranslationTask extends Task {
     constructor(public verb: Verb) {
         super(verb);
         this.type = 'translation';
