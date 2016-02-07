@@ -46,7 +46,7 @@ my-theory {
 .help {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 22px;
     font-size: 18px;
 }
 .fa {
