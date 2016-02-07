@@ -13,16 +13,20 @@ export class TaskService {
     private currentTask: Task;
     private tasksDoneCount: number;
 
+    private _initialLivesCount = 3;
+    private _livesCount: number;
+
     constructor() {
         this.reset();
     }
 
     public reset() {
         this.tasksDoneCount = 0;
+        this._livesCount = this._initialLivesCount;
 
         this.tasks = <Task[]>_.chain(verbs)
             .map(verb => new Task(verb))
-            .sample(10)
+            .sample(20)
             .value();
 
         this.currentTask = this.tasks[0];
@@ -33,7 +37,7 @@ export class TaskService {
     }
 
     public noMoreQuestions() {
-        return !this.currentTask;
+        return !this.currentTask || this._livesCount === 0;
     }
 
     public get totalCount() {
@@ -44,13 +48,30 @@ export class TaskService {
         return this.tasksDoneCount;
     }
 
+    public get livesCount() {
+        return this._livesCount;
+    }
+
+    public get initialLivesCount() {
+        return this._initialLivesCount;
+    }
+
     public checkAnswer(answer: string) {
         this.currentTask.checkAnswer(answer);
-        this.tasksDoneCount++;
     }
 
     public goToNextTask() {
-        this.currentTask = this.tasksDoneCount < this.tasks.length ? this.tasks[this.tasksDoneCount] : null;
+        if (this.currentTask.answerIsWrong) {
+            this._livesCount--;
+        }
+
+        if (this._livesCount > 0) {
+            this.tasksDoneCount++;
+        }
+
+        this.currentTask = this.tasksDoneCount < this.tasks.length && this._livesCount > 0
+                           ? this.tasks[this.tasksDoneCount]
+                           : null;
     }
 
     public get verbs(): Verb[] {

@@ -6,13 +6,15 @@ import {ProgressComponent} from './progress.component';
 import {TaskComponent} from './task.component';
 import {ResultComponent} from './result.component';
 import {TheoryComponent} from './theory.component';
+import {LivesComponent} from './lives.component';
 
 @Component({
     selector: 'my-quiz',
-    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, TheoryComponent],
+    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, TheoryComponent, LivesComponent],
     template: `<a href class="help" [routerLink]="['Theory']">
                  <i class="fa fa-question-circle"></i>Tabla de verbos
                </a>
+               <my-lives></my-lives>
                <div *ngIf="store.task">
                  <my-progress [max]="store.totalCount" [value]="store.doneCount"></my-progress>
                  <my-task>

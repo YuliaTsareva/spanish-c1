@@ -3,6 +3,14 @@ my-task {
     padding: 5px 0;
     margin-top: 115px;
 }
+
+my-lives {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 25px;
+}
+
 @media (max-width: 767px) {
     my-task {
         margin-top: 60px;

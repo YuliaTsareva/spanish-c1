@@ -17,6 +17,6 @@ import {TaskService} from './task.service';
     `
 })
 export class TheoryComponent {
-    constructor(public store: TaskService) {
+    constructor(private store: TaskService) {
     }
 }
