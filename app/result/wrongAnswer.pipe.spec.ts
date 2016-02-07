@@ -1,6 +1,6 @@
 import {WrongAnswerPipe} from './wrongAnswer.pipe';
-import {Task} from './task';
-import {Verb} from './verb';
+import {Task} from '../task';
+import {Verb} from '../verb';
 
 describe('WrongAnswerPipe', () => {
     let verb: Verb;

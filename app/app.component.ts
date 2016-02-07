@@ -3,8 +3,8 @@ import {RouterOutlet} from 'angular2/router';
 import {RouteConfig} from 'angular2/router';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {QuizComponent} from './quiz.component';
-import {TheoryComponent} from './theory.component';
+import {QuizComponent} from './quiz/quiz.component';
+import {TheoryComponent} from './theory/theory.component';
 
 @Component({
     selector: 'my-app',

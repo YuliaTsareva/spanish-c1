@@ -1,8 +1,5 @@
 import {Verb} from './verb';
 
-import {PrepositionTaskComponent} from './prepositionTask.component';
-import {TranslationTaskComponent} from './translationTask.component';
-
 export class Task {
     public answer: string;
 

@@ -1,5 +1,5 @@
 import {Pipe} from 'angular2/core';
-import {Task} from './task';
+import {Task} from '../task';
 
 @Pipe({
     name: 'wrong'

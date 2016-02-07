@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
 import {NgClass} from 'angular2/common';
 
-import {Autofocus} from './autofocus.directive';
-import {TaskService} from './task.service';
+import {Autofocus} from '../autofocus.directive';
+import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-preposition-task',

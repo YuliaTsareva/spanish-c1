@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {TaskService} from './task.service';
+import {TaskService} from '../task.service';
 import {WrongAnswerPipe} from './wrongAnswer.pipe';
 
 @Component({
