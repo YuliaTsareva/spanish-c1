@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {TaskService} from './task.service';
+import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-theory',

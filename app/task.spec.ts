@@ -1,5 +1,6 @@
 import {Verb} from './verb';
 import {Task} from './task';
+import {PrepositionTask} from './task';
 
 describe('Task', () => {
     let verb: Verb;
@@ -7,7 +8,7 @@ describe('Task', () => {
 
     beforeEach(() => {
         verb = new Verb('depender', 'de', 'algo', 'зависеть от чего-либо');
-        task = new Task(verb);
+        task = new PrepositionTask(verb);
     });
 
     describe('without answer', () => {

@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 import {NgFor, NgClass} from 'angular2/common';
 
 import * as _ from 'underscore';
-import {TaskService} from './task.service';
+import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-lives',
