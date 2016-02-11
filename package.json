@@ -35,11 +35,11 @@
     "phantomjs-prebuilt": "2.1.4",
     "raw-loader": "0.5.1",
     "ts-helper": "0.0.1",
-    "ts-loader": "0.8.0",
+    "ts-loader": "0.8.1",
     "tslint": "3.3.0",
     "tslint-loader": "2.1.0",
     "typescript": "1.7.5",
-    "typings": "0.6.7",
+    "typings": "0.6.8",
     "webpack": "1.12.13"
   }
 }
