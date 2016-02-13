@@ -10,7 +10,6 @@ require('zone.js/dist/zone-microtask.min');
 // In production manually include the operators you use
 require('rxjs/add/operator/map');
 
-//require('es7-reflect-metadata/src/global/browser');
 require('reflect-metadata');
 
 // Angular 2
