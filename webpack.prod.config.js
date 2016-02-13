@@ -7,7 +7,8 @@ webpackConfig.debug = false;
 var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
-    }
+    },
+    mangle: false
 });
 webpackConfig.plugins.push(uglifyPlugin);
 
