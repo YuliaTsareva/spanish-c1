@@ -5,7 +5,11 @@ import {bootstrap} from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 import {HashLocationStrategy} from 'angular2/router';
 import {LocationStrategy} from 'angular2/router';
-import {provide} from 'angular2/core';
+import {provide, enableProdMode} from 'angular2/core';
+
+if (process.env.ENV === 'production') {
+    enableProdMode();
+}
 
 /*
  * App Component
