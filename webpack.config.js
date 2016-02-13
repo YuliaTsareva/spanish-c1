@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ENV = process.env.ENV = 'development';
 
 module.exports = {
     // for faster builds use 'eval'
@@ -14,7 +15,8 @@ module.exports = {
         path: path.resolve('dist'),
         filename: '[name].bundle.js',
         sourceMapFilename: '[name].map',
-        chunkFilename: '[id].chunk.js'
+        chunkFilename: '[id].chunk.js',
+        publicPath: 'dist'
     },
 
     resolve: {
@@ -49,7 +51,12 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(true),
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity})
+        new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': JSON.stringify(ENV)
+            }
+        })
     ],
 
     // Other module loader config

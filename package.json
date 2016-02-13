@@ -6,7 +6,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server --colors --display-error-details --hot --inline --progress",
     "build": "node node_modules/webpack/bin/webpack --config webpack.prod.config",
     "karma": "./node_modules/karma/bin/karma start",
     "test": "npm run build && npm run karma"
@@ -40,6 +40,7 @@
     "tslint-loader": "2.1.0",
     "typescript": "1.7.5",
     "typings": "0.6.8",
-    "webpack": "1.12.13"
+    "webpack": "1.12.13",
+    "webpack-dev-server": "1.14.1"
   }
 }
