@@ -66,8 +66,6 @@ module.exports = {
             '__decorate': 'Reflect.decorate'
         }),
         new ProvidePlugin({
-            // '__metadata': 'ts-helper/metadata',
-            // '__decorate': 'ts-helper/decorate',
             '__awaiter': 'ts-helper/awaiter',
             '__extends': 'ts-helper/extends',
             '__param': 'ts-helper/param',
@@ -84,15 +82,3 @@ module.exports = {
         setImmediate: false
     }
 };
-
-// Helper functions
-
-function root(args) {
-    args = Array.prototype.slice.call(arguments, 0);
-    return path.join.apply(path, [__dirname].concat(args));
-}
-
-function rootNode(args) {
-    args = Array.prototype.slice.call(arguments, 0);
-    return root.apply(path, ['node_modules'].concat(args));
-}
