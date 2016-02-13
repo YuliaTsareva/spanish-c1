@@ -4,7 +4,8 @@ import {Injectable} from 'angular2/core';
 import {Task} from './task';
 import {Verb} from './verb';
 
-const verbs = _.filter<Verb>(require('../data/verbs.csv'), item => !!item.translation);
+// todo find a way to show all verbs in the theory section
+const verbs = _.filter<Verb>(require('../data/verbs.csv'), item => !!item.translation).slice(0, 36);
 
 @Injectable()
 export class TaskService {
