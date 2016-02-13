@@ -23,7 +23,7 @@ depender,de,algo,зависеть от чего-либо
 despedirse,de,alguien,прощаться с кем-либо
 dirigirse,a,alguien,обращаться к кому-либо
 empeñarse,en,infinitivo,упорствовать в чем-либо
-encargarse
+encargarse,de,algo,браться за что-либо
 enterarse,de,algo,осведомляться о чем-либо
 esmerarse,en,algo,усердствовать в чем-либо
 insistir,en,algo,настаивать на чем-либо
@@ -39,8 +39,9 @@ oponerse,a,alguien,противиться кому-либо
 optar
 permanecer,en,algún sitio,оставаться где-либо
 presumir
-recurrir
-renunciar
+recurrir,a,alguien,обращаться к кому-либо
+recurrir,a,algo,прибегнуть к чему-либо
+renunciar,a,algo,отказаться от чего-либо
 soñar,,algo,видеть во сне что-либо
 soñar,con,algo,мечтать о чем-либо
 supeditar,a,algo,подчинять чему-либо

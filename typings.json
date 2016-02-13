@@ -1,5 +1,7 @@
 {
   "ambientDependencies": {
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#4b36b94d5910aa8a4d20bdcd5bd1f9ae6ad18d3c",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#aee0039a2d6686ec78352125010ebb38a7a7d743",
     "underscore": "github:DefinitelyTyped/DefinitelyTyped/underscore/underscore.d.ts#669e1b73f18ea6ea15bfbfbbdad6501bfa0ff340"
   }
 }
