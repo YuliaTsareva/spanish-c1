@@ -58,4 +58,12 @@ my-theory {
         height: 100%;
         margin: 0;
     }
+
+    my-theory {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        width: auto;
+        height: auto;
+    }
 }
