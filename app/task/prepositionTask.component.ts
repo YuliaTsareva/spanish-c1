@@ -1,12 +1,11 @@
-import {Component} from 'angular2/core';
-import {NgClass} from 'angular2/common';
+import {Component} from '@angular/core';
 
 import {Autofocus} from '../autofocus.directive';
 import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-preposition-task',
-    directives: [NgClass, Autofocus],
+    directives: [Autofocus],
     template: `<h3>
                     <a href="#" class="verb" (mouseenter)="showTranslation()" (mouseout)="hideTranslation()">
                         {{store.task.verb.verb}}</a>

@@ -2,7 +2,6 @@
   "name": "spanish-c1",
   "version": "0.1.0",
   "scripts": {
-    "postinstall": "node node_modules/typings/dist/bin/typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
@@ -13,16 +12,26 @@
   },
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-beta.6",
-    "es6-promise": "3.0.2",
-    "es6-shim": "0.33.13",
-    "es7-reflect-metadata": "1.5.5",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/platform-server": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.2",
+    "core-js": "2.4.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.6",
     "underscore": "1.8.3",
-    "zone.js": "0.5.14"
+    "zone.js": "~0.6.12"
   },
   "devDependencies": {
+    "@types/core-js": "0.9.28",
+    "@types/jasmine": "2.2.29",
+    "@types/node": "4.0.29",
+    "@types/webpack": "1.12.29",
+    "awesome-typescript-loader": "1.1.1",
     "dsv-loader": "1.0.3",
     "jasmine-core": "2.4.1",
     "karma": "0.13.19",
@@ -34,13 +43,11 @@
     "phantomjs-polyfill": "0.0.1",
     "phantomjs-prebuilt": "2.1.4",
     "raw-loader": "0.5.1",
-    "ts-helper": "0.0.1",
-    "ts-loader": "0.8.1",
+    "ts-helpers": "1.1.1",
     "tslint": "3.3.0",
     "tslint-loader": "2.1.0",
-    "typescript": "1.7.5",
-    "typings": "0.6.8",
-    "webpack": "1.12.13",
+    "typescript": "^2.0.0-beta",
+    "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1"
   }
 }

@@ -1,12 +1,11 @@
-import {Component} from 'angular2/core';
-import {NgClass} from 'angular2/common';
+import {Component} from '@angular/core';
 
 import {Autofocus} from '../autofocus.directive';
 import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-translation-task',
-    directives: [NgClass, Autofocus],
+    directives: [Autofocus],
     template: `<h3>
                     <div class="translation">{{store.task.verb.translation}}</div>
                     <input [(ngModel)]="answer" (keyup.enter)="onEnterPressed()"

@@ -8,7 +8,12 @@ module.exports = {
     debug: true,
 
     // our angular app
-    entry: {'vendor': './app/vendor.ts', 'main': './app/main.ts', 'test': './app/test-main.js'},
+    entry: {
+        'polyfills': './app/polyfills.browser.ts',
+        'vendor':    './app/vendor.browser.ts',
+        'main':      './app/main.browser.ts',
+        'test':      './app/test-main.js'
+    },
 
     // Config for our build files
     output: {
@@ -35,7 +40,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: 'ts-loader',
+                loader: 'awesome-typescript-loader',
                 exclude: [/node_modules\/(?!(ng2-.+))/]
             },
             {
@@ -51,7 +56,10 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(true),
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
+        // new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['polyfills', 'vendor'].reverse()
+        }),
         new webpack.DefinePlugin({
             'process.env': {
                 'ENV': JSON.stringify(ENV)

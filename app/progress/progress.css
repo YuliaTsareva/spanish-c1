@@ -1,4 +1,5 @@
-.progress {
+:host {
+    display: block;
     background: #ecf0f1;
     height: 7px;
     border-radius: 0;

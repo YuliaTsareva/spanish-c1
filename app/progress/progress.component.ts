@@ -1,12 +1,11 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'my-progress',
     template: `
-        <div class="progress">
           <div class="progress-bar" [ngStyle]="{width: getPercentage()}">
           </div>
-        </div>`,
+    `,
     styles: [ require('./progress.css') ]
 })
 export class ProgressComponent {

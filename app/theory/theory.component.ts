@@ -1,17 +1,17 @@
-import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
-
+import {Component} from '@angular/core';
 import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-theory',
-    directives: [ROUTER_DIRECTIVES],
     template: `
-               <a href class="help" [routerLink]="['Quiz']">
+               <a href class="help" routerLink="/">
                  <i class="fa fa-times"></i>Cerrar la tabla
                </a>
                <ul>
-                 <li *ngFor="#verb of store.verbs">{{verb.verb}} <strong>{{verb.preposition}}</strong> {{verb.object}}
+                 <li *ngFor="let verb of store.verbs">
+                    {{verb.verb}}
+                    <strong>{{verb.preposition}}</strong>
+                    {{verb.object}}
                  </li>
                </ul>
     `
