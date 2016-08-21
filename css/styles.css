@@ -1,0 +1,69 @@
+body {
+    background-color: #eee;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+    color: #039be5;
+}
+
+strong {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none
+}
+
+my-app {
+    display: block;
+    background: #fff;
+    margin: 100px auto auto;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    color: #3c3c3c;
+    width: 800px;
+    height: 370px;
+}
+
+my-theory {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 57px 15px 20px 40px;
+}
+
+.help {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    font-size: 18px;
+}
+.fa {
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    my-app {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    my-theory {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        width: auto;
+        height: auto;
+    }
+}
