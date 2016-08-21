@@ -6,7 +6,7 @@
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server --colors --display-error-details --hot --inline --progress",
-    "build": "node node_modules/webpack/bin/webpack --config webpack.prod.config",
+    "build": "node node_modules/webpack/bin/webpack --config config/webpack.prod.config",
     "karma": "./node_modules/karma/bin/karma start",
     "test": "npm run build && npm run karma"
   },
@@ -21,10 +21,10 @@
     "@angular/platform-server": "2.0.0-rc.4",
     "@angular/router": "3.0.0-beta.2",
     "core-js": "2.4.0",
-    "reflect-metadata": "^0.1.8",
+    "reflect-metadata": "0.1.8",
     "rxjs": "5.0.0-beta.6",
     "underscore": "1.8.3",
-    "zone.js": "~0.6.12"
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
     "@types/core-js": "0.9.28",
@@ -43,6 +43,7 @@
     "phantomjs-polyfill": "0.0.1",
     "phantomjs-prebuilt": "2.1.4",
     "raw-loader": "0.5.1",
+    "source-map-loader": "0.1.5",
     "ts-helpers": "1.1.1",
     "tslint": "3.3.0",
     "tslint-loader": "2.1.0",
