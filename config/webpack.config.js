@@ -61,6 +61,7 @@ module.exports = {
             name: ['polyfills', 'vendor'].reverse()
         }),
         new webpack.DefinePlugin({
+            'ENV': JSON.stringify(ENV),
             'process.env': {
                 'ENV': JSON.stringify(ENV)
             }

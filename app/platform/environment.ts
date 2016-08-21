@@ -12,7 +12,6 @@ let PROVIDERS = [
 // https://github.com/angular/angular/blob/86405345b781a9dc2438c0fbe3e9409245647019/TOOLS_JS.md
 let _decorateComponentRef = function identity(value) { return value; };
 
-const ENV = 'dev'; // TODO FIX ME
 if ('production' === ENV) {
   // Production
   disableDebugTools();

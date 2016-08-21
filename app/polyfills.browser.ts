@@ -25,7 +25,6 @@ import 'zone.js/dist/zone';
 import 'ts-helpers';
 
 
-const ENV = 'dev'; // TODO fix me
 if ('production' === ENV) {
     // Production
 
