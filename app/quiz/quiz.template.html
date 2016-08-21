@@ -1,0 +1,12 @@
+<a href class="help" routerLink="/theory">
+    <i class="fa fa-question-circle"></i>Tabla de verbos
+</a>
+
+<my-lives></my-lives>
+
+<div *ngIf="store.task">
+    <my-progress [max]="store.totalCount" [value]="store.doneCount"></my-progress>
+    <my-task></my-task>
+</div>
+
+<my-result *ngIf="store.noMoreQuestions()"></my-result>

@@ -44,12 +44,16 @@ module.exports = {
                 exclude: [/node_modules\/(?!(ng2-.+))/]
             },
             {
-                test: /\.csv$/,
-                loader: 'dsv-loader'
+                test: /\.html/,
+                loader: 'raw-loader'
             },
             {
                 test: /\.css$/,
                 loader: 'raw-loader'
+            },
+            {
+                test: /\.csv$/,
+                loader: 'dsv-loader'
             }
         ]
     },

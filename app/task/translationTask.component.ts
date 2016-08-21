@@ -1,34 +1,20 @@
 import {Component} from '@angular/core';
-
 import {Autofocus} from '../autofocus.directive';
 import {TaskService} from '../task.service';
 
 @Component({
     selector: 'my-translation-task',
     directives: [Autofocus],
-    template: `<h3>
-                    <div class="translation">{{store.task.verb.translation}}</div>
-                    <input [(ngModel)]="answer" (keyup.enter)="onEnterPressed()"
-                        [readonly]="store.task.isAnswered"
-                        class="answer" autofocus
-                        [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
-                    <span class="object">{{store.task.verb.object}}</span>
-               </h3>
-               <div class="result"
-                    [ngClass]="{ok: store.task.answerIsRight, error: store.task.answerIsWrong}">
-                 <span *ngIf="store.task.answerIsWrong" class="wrong-answer">
-                    {{store.task.verb.verb}} <strong>{{store.task.verb.preposition}}</strong> {{store.task.verb.object}}
-                 </span>
-               </div>`,
+    template: require('./translationTask.template.html'),
     styles: [ require('./translationTask.css') ]
 })
 export class TranslationTaskComponent {
-    private answer = '';
+    answer = '';
 
     constructor(public store: TaskService) {
     }
 
-    private onEnterPressed() {
+    onEnterPressed() {
         if (!this.store.task.isAnswered) {
             this.store.checkAnswer(this.answer);
         } else {
