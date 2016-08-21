@@ -22,7 +22,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: 'ts-loader',
+                loader: 'awesome-typescript-loader',
                 query: {
                     // remove TypeScript helpers to be injected below by DefinePlugin
                     'compilerOptions': {
