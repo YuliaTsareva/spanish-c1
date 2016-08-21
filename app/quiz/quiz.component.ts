@@ -1,5 +1,4 @@
-import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
 
 import {TaskService} from '../task.service';
 import {ProgressComponent} from '../progress/progress.component';
@@ -9,8 +8,8 @@ import {LivesComponent} from '../lives/lives.component';
 
 @Component({
     selector: 'my-quiz',
-    directives: [ROUTER_DIRECTIVES, ProgressComponent, TaskComponent, ResultComponent, LivesComponent],
-    template: `<a href class="help" [routerLink]="['Theory']">
+    directives: [ProgressComponent, TaskComponent, ResultComponent, LivesComponent],
+    template: `<a href class="help" routerLink="/theory">
                  <i class="fa fa-question-circle"></i>Tabla de verbos
                </a>
                <my-lives></my-lives>

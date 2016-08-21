@@ -1,5 +1,5 @@
 import * as _ from 'underscore';
-import {Injectable} from 'angular2/core';
+import {Injectable} from '@angular/core';
 
 import {Task} from './task';
 import {Verb} from './verb';

@@ -1,9 +1,9 @@
-import {Directive, ElementRef} from 'angular2/core';
+import {Directive, ElementRef, OnInit} from '@angular/core';
 
 @Directive({
     selector: '[autofocus]'
 })
-export class Autofocus {
+export class Autofocus implements OnInit {
     constructor(public el: ElementRef) {
     }
 

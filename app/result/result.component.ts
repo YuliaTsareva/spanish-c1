@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {TaskService} from '../task.service';
 import {WrongAnswerPipe} from './wrongAnswer.pipe';
 
@@ -7,7 +7,7 @@ import {WrongAnswerPipe} from './wrongAnswer.pipe';
     pipes: [WrongAnswerPipe],
     template: `<div class="errors">
                    <ul>
-                     <li *ngFor="#error of store.tasks | wrong">
+                     <li *ngFor="let error of store.tasks | wrong">
                         {{error.verb.verb}} <strong>{{error.verb.preposition}}</strong> {{error.verb.object}}
                      </li>
                      <li class="repeat">
