@@ -7,7 +7,9 @@ webpackConfig.debug = false;
 
 webpackConfig.plugins = [
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: ['polyfills', 'vendor'].reverse()
+    }),
     new webpack.DefinePlugin({
         'process.env': {
             'ENV': JSON.stringify(ENV)
